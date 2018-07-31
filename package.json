@@ -1,10 +1,10 @@
 {
-  "name": "chinese2pinyin",
+  "name": "simplified-chinese",
   "version": "1.0.0",
   "description": "Covert chinese word to pinyin.",
-  "main": "dist/chinese2pinyin.min.js",
-  "module": "dist/chinese2pinyin.esm.js",
-  "browser": "dist/chinese2pinyin.umd.js",
+  "main": "dist/simplified-chinese.min.js",
+  "module": "dist/simplified-chinese.esm.js",
+  "browser": "dist/simplified-chinese.umd.js",
   "scripts": {
     "dev": "rollup -c -w",
     "build": "rollup -c",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zollero/chinese2pinyin.git"
+    "url": "git+https://github.com/zollero/simplified-chinese.git"
   },
   "author": "zollero <corona7@163.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zollero/chinese2pinyin/issues"
+    "url": "https://github.com/zollero/simplified-chinese/issues"
   },
-  "homepage": "https://github.com/zollero/chinese2pinyin#readme",
+  "homepage": "https://github.com/zollero/simplified-chinese#readme",
   "devDependencies": {
     "rollup": "^0.63.4",
     "rollup-plugin-commonjs": "^9.1.4",

@@ -1,7 +1,7 @@
 
 import { POLY_PHONE, FULL_DICT, CHAR_DICT } from './config'
 
-class Chinese2Pinyin {
+class Chinese {
     options: {
         checkPolyphone: boolean,
         charcase: string
@@ -117,4 +117,4 @@ class Chinese2Pinyin {
 	}
 }
 
-export default Chinese2Pinyin
+export default Chinese
