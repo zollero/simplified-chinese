@@ -8,7 +8,7 @@ import { uglify } from 'rollup-plugin-uglify';
 import { name, main, module, browser } from './package.json'
 
 export default {
-  input: './index.ts',
+  input: './src/index.ts',
   output: [{
     file: main,
     name: name,

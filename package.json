@@ -6,7 +6,9 @@
   "module": "dist/chinese2pinyin.esm.js",
   "browser": "dist/chinese2pinyin.umd.js",
   "scripts": {
-    "dev": "rollup -c -w"
+    "dev": "rollup -c -w",
+    "build": "rollup -c",
+    "test": "node test/index.js"
   },
   "repository": {
     "type": "git",
