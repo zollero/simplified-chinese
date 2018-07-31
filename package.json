@@ -2,9 +2,10 @@
   "name": "chinese2pinyin",
   "version": "1.0.0",
   "description": "Covert chinese word to pinyin.",
-  "main": "index.js",
+  "main": "dist/chinese2pinyin.min.js",
+  "module": "dist/chinese2pinyin.esm.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "rollup -c -w"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,14 @@
   "bugs": {
     "url": "https://github.com/zollero/chinese2pinyin/issues"
   },
-  "homepage": "https://github.com/zollero/chinese2pinyin#readme"
+  "homepage": "https://github.com/zollero/chinese2pinyin#readme",
+  "devDependencies": {
+    "rollup": "^0.63.4",
+    "rollup-plugin-commonjs": "^9.1.4",
+    "rollup-plugin-json": "^3.0.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-typescript": "^0.8.1",
+    "rollup-plugin-uglify": "^4.0.0",
+    "typescript": "^2.9.2"
+  }
 }
