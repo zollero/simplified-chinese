@@ -4,6 +4,7 @@
   "description": "Covert chinese word to pinyin.",
   "main": "dist/chinese2pinyin.min.js",
   "module": "dist/chinese2pinyin.esm.js",
+  "browser": "dist/chinese2pinyin.umd.js",
   "scripts": {
     "dev": "rollup -c -w"
   },
