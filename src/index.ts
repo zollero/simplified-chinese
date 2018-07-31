@@ -1,7 +1,25 @@
 
 import { POLY_PHONE, FULL_DICT, CHAR_DICT } from './config'
 
-class Chinese {
+
+function covertToPinyin (word: string, options: object): string {
+
+	return ''
+}
+
+function getFirstLetters(word: string, options: object): string {
+
+	return ''
+}
+
+const Chinese = {
+	covertToPinyin,
+	getFirstLetters
+}
+
+export default Chinese
+
+class Chinese2 {
     options: {
         checkPolyphone: boolean,
         charcase: string
@@ -116,5 +134,6 @@ class Chinese {
 		return result;
 	}
 }
+new Chinese2()
 
-export default Chinese
+// export default Chinese
