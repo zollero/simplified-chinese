@@ -1,0 +1,19 @@
+{
+  "name": "chinese2pinyin",
+  "version": "1.0.0",
+  "description": "Covert chinese word to pinyin.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zollero/chinese2pinyin.git"
+  },
+  "author": "zollero <corona7@163.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zollero/chinese2pinyin/issues"
+  },
+  "homepage": "https://github.com/zollero/chinese2pinyin#readme"
+}
