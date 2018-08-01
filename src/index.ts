@@ -1,16 +1,18 @@
 
-import { POLY_PHONE, FULL_DICT, CHAR_DICT } from './config'
+import { POLY_PHONE, FULL_DICT, CHAR_DICT } from './dict'
+
+import { getEveryLetters, getPinyinOfWords } from './utils'
 
 
-function covertToPinyin (word: string, options: object): string {
+function covertToPinyin (words: string, options?: object): string {
+	return getPinyinOfWords(getEveryLetters(words))
+}
+
+function getFirstLetters(word: string, options?: object): string {
 
 	return ''
 }
 
-function getFirstLetters(word: string, options: object): string {
-
-	return ''
-}
 
 const Chinese = {
 	covertToPinyin,

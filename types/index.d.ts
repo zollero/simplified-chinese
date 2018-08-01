@@ -1,9 +1,9 @@
 
 interface Chinese {
     
-    covertToPinyin(word: string, options?: Chinese.covertToPinyinOptions): string
+    covertToPinyin(words: string, options?: Chinese.covertToPinyinOptions): string
 
-    getFirstLetters(word: string, options?: Chinese.getFirstLettersOptions): string
+    getFirstLetters(words: string, options?: Chinese.getFirstLettersOptions): string
 }
 
 
@@ -22,6 +22,10 @@ declare namespace Chinese {
     }
 
     export interface getFirstLettersOptions {
+
+    }
+
+    export interface getEveryLettersOptions {
 
     }
 }
