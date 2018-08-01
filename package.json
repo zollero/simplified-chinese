@@ -5,6 +5,7 @@
   "main": "dist/simplified-chinese.min.js",
   "module": "dist/simplified-chinese.esm.js",
   "browser": "dist/simplified-chinese.umd.js",
+  "types": "types/index.d.ts",
   "scripts": {
     "dev": "rollup -c -w",
     "build": "rollup -c",
@@ -21,6 +22,7 @@
   },
   "homepage": "https://github.com/zollero/simplified-chinese#readme",
   "devDependencies": {
+    "mocha": "^5.2.0",
     "rollup": "^0.63.4",
     "rollup-plugin-commonjs": "^9.1.4",
     "rollup-plugin-json": "^3.0.0",
@@ -28,5 +30,8 @@
     "rollup-plugin-typescript": "^0.8.1",
     "rollup-plugin-uglify": "^4.0.0",
     "typescript": "^2.9.2"
+  },
+  "dependencies": {
+    "is-string": "^1.0.4"
   }
 }
