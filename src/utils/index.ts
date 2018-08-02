@@ -2,7 +2,6 @@
 import isString from 'is-string';
 
 import { FULL_DICT } from '../dict'
-import { join } from 'path';
 
 interface getEveryLettersOptions {
     // escapable: boolean // escape which is not a simplified chinese word
