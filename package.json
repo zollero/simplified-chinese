@@ -1,0 +1,37 @@
+{
+  "name": "simplified-chinese",
+  "version": "1.0.0",
+  "description": "Covert chinese word to pinyin.",
+  "main": "dist/simplified-chinese.min.js",
+  "module": "dist/simplified-chinese.esm.js",
+  "browser": "dist/simplified-chinese.umd.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "dev": "rollup -c -w",
+    "build": "rollup -c",
+    "test": "node test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zollero/simplified-chinese.git"
+  },
+  "author": "zollero <corona7@163.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zollero/simplified-chinese/issues"
+  },
+  "homepage": "https://github.com/zollero/simplified-chinese#readme",
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "rollup": "^0.63.4",
+    "rollup-plugin-commonjs": "^9.1.4",
+    "rollup-plugin-json": "^3.0.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-typescript": "^0.8.1",
+    "rollup-plugin-uglify": "^4.0.0",
+    "typescript": "^2.9.2"
+  },
+  "dependencies": {
+    "is-string": "^1.0.4"
+  }
+}
