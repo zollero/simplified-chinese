@@ -1,2 +1,13 @@
-# chinese2pinyin
-Convert a chinese word to pinyin.
+# simplified-chinese
+
+> A tool to do something with simplified chinese and pinyin.
+
+## Installation
+
+## Getting Started
+
+## Docs
+
+## LICENSE
+
+MIT
