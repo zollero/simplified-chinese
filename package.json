@@ -1,7 +1,7 @@
 {
   "name": "simplified-chinese",
   "version": "1.0.0",
-  "description": "Covert chinese word to pinyin.",
+  "description": "A tool to do something with simplified chinese and pinyin.",
   "main": "dist/simplified-chinese.min.js",
   "module": "dist/simplified-chinese.esm.js",
   "browser": "dist/simplified-chinese.umd.js",
@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "rollup -c -w",
     "build": "rollup -c",
-    "test": "node test/index.js"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",

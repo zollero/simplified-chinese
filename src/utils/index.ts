@@ -2,7 +2,6 @@
 import isString from 'is-string';
 
 import { FULL_DICT } from '../dict'
-import { join } from 'path';
 
 interface getEveryLettersOptions {
     // escapable: boolean // escape which is not a simplified chinese word
@@ -10,7 +9,7 @@ interface getEveryLettersOptions {
 }
 
 interface getPinyinOfWordsOptions {
-    joinText?: string // text to join the pinyin of words
+    separator?: string // text to join the pinyin of words
 }
 
 type Words = Array<string | undefined>
@@ -31,12 +30,12 @@ export function getEveryLetters(
 export function getPinyinOfWords(
     words: Words, 
     options: getPinyinOfWordsOptions = {
-        joinText: ''
+        separator: ''
     }
 ): string {
-    const { joinText } = options
+    const { separator } = options
 
-    return words.map(v => getPiyinOfWord(v)).join(joinText)
+    return words.map(v => getPiyinOfWord(v)).join(separator)
 }
 
 function getPiyinOfWord(word): string {

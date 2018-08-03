@@ -814,10 +814,10 @@
     }
     function getPinyinOfWords(words, options) {
         if (options === void 0) { options = {
-            joinText: ''
+            separator: ''
         }; }
-        var joinText = options.joinText;
-        return words.map(function (v) { return getPiyinOfWord(v); }).join(joinText);
+        var separator = options.separator;
+        return words.map(function (v) { return getPiyinOfWord(v); }).join(separator);
     }
     function getPiyinOfWord(word) {
         var keys = Object.keys(FULL_DICT);
@@ -850,7 +850,11 @@
     }
 
     function covertToPinyin(words, options) {
-        return getPinyinOfWords(getEveryLetters(words));
+        if (options === void 0) { options = {
+            separator: ''
+        }; }
+        var separator = options.separator;
+        return getPinyinOfWords(getEveryLetters(words), { separator: separator });
     }
     function getFirstLetters(word, options) {
         return '';

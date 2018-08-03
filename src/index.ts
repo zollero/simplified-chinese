@@ -3,9 +3,20 @@ import { POLY_PHONE, FULL_DICT, CHAR_DICT } from './dict'
 
 import { getEveryLetters, getPinyinOfWords } from './utils'
 
+export interface covertToPinyinOptions {
+	separator?: string
+}
 
-function covertToPinyin (words: string, options?: object): string {
-	return getPinyinOfWords(getEveryLetters(words))
+
+function covertToPinyin (
+	words: string, 
+	options: covertToPinyinOptions = {
+		separator: ''
+	}
+): string {
+	const { separator } = options
+
+	return getPinyinOfWords(getEveryLetters(words), { separator })
 }
 
 function getFirstLetters(word: string, options?: object): string {
