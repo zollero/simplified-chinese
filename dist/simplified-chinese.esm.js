@@ -849,7 +849,7 @@ function shouldBeString(word) {
     }
 }
 
-function convertToPinyin(words, options) {
+function convert2Pinyin(words, options) {
     if (options === void 0) { options = {
         separator: '',
         capitalizeFirstLetter: true
@@ -861,7 +861,7 @@ function getFirstLetters(word, options) {
     return '';
 }
 var Chinese = {
-    convertToPinyin: convertToPinyin,
+    convert2Pinyin: convert2Pinyin,
     getFirstLetters: getFirstLetters
 };
 var Chinese2 = (function () {

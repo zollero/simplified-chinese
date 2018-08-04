@@ -1,5 +1,5 @@
 
-const { convertToPinyin } = require('..')
+const { convert2Pinyin } = require('..')
 const assert = require('assert')
 
 
@@ -13,24 +13,24 @@ describe('Convert chinese word to pinyin spell', () => {
     describe('Test of function of converToPinyin', () => {
         
         it('should return `ZhongGuo` default', () => {
-            const value = convertToPinyin('中国')
+            const value = convert2Pinyin('中国')
             assert.equal(value, 'ZhongGuo')
         })
 
         it('shoule return `zhongguo` with capitalizeFirstLetter: `false`', () => {
-            assert.equal(convertToPinyin('中国', {
+            assert.equal(convert2Pinyin('中国', {
                 capitalizeFirstLetter: false
             }), 'zhongguo')
         })
 
         it('should return `Zhong-Guo` with separator: `-`', () => {
-            assert.equal(convertToPinyin('中国', {
+            assert.equal(convert2Pinyin('中国', {
                 separator: '-'
             }), 'Zhong-Guo')
         })
 
         it('should return `zhong==guo` with capitalizeFirstLetter: false and separator: `==`', () => {
-            assert.equal(convertToPinyin('中国', {
+            assert.equal(convert2Pinyin('中国', {
                 capitalizeFirstLetter: false,
                 separator: '=='
             }), 'zhong==guo')

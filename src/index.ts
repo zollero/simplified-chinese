@@ -9,7 +9,7 @@ export interface convertToPinyinOptions {
 }
 
 
-function convertToPinyin (
+function convert2Pinyin (
 	words: string, 
 	options: convertToPinyinOptions = {
 		separator: '',
@@ -32,7 +32,7 @@ function getFirstLetters(word: string, options?: object): string {
 
 
 const Chinese = {
-	convertToPinyin,
+	convert2Pinyin,
 	getFirstLetters
 }
 

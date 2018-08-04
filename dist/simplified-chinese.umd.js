@@ -855,7 +855,7 @@
         }
     }
 
-    function convertToPinyin(words, options) {
+    function convert2Pinyin(words, options) {
         if (options === void 0) { options = {
             separator: '',
             capitalizeFirstLetter: true
@@ -867,7 +867,7 @@
         return '';
     }
     var Chinese = {
-        convertToPinyin: convertToPinyin,
+        convert2Pinyin: convert2Pinyin,
         getFirstLetters: getFirstLetters
     };
     var Chinese2 = (function () {
