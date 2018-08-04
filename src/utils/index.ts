@@ -8,11 +8,12 @@ interface getEveryLettersOptions {
     escapeText?: string // escape and replace with this text of which is not chinese
 }
 
-interface getPinyinOfWordsOptions {
-    separator?: string // text to join the pinyin of words
-}
+// interface getPinyinOfWordsOptions {
+//     separator?: string // text to join the pinyin of words
+//     capitalizeFirstLetter?: boolean // whether to capitalize the first letter of every word's pinyin
+// }
 
-type Words = Array<string | undefined>
+type Words = Array<string>
 
 export function getEveryLetters(
     words: string, 
@@ -29,26 +30,31 @@ export function getEveryLetters(
 
 export function getPinyinOfWords(
     words: Words, 
-    options: getPinyinOfWordsOptions = {
-        separator: ''
-    }
+    separator: string = '',
+    capitalizeFirstLetter: boolean = true
 ): string {
-    const { separator } = options
-
-    return words.map(v => getPiyinOfWord(v)).join(separator)
+    return words.map(v => getPiyinOfWord(v, capitalizeFirstLetter)).join(separator)
 }
 
-function getPiyinOfWord(word): string {
+function getPiyinOfWord(word: string, capitalizeFirstLetter: boolean = true): string {
     const keys = Object.keys(FULL_DICT);
     let key
     for (let i = 0; i < keys.length; i++) {
         const value = FULL_DICT[keys[i]]
         if (value.indexOf(word) !== -1) {
-            key = keys[i]
+            key = capitalizeFirstLetter ? capitalizeTheFirstLetter(keys[i]) : keys[i]
             break;
         }
     }
     return key
+}
+
+function capitalizeTheFirstLetter(word: string): string {
+    if (isString(word) && word.length > 1) {
+        const firstLetter = word.charAt(0)
+        return word.replace(new RegExp(`^${firstLetter}`), firstLetter.toLocaleUpperCase())
+    }
+    return word
 }
 
 function isSimplifiedChineseWord(word: string): boolean {

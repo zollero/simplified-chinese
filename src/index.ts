@@ -3,20 +3,26 @@ import { POLY_PHONE, FULL_DICT, CHAR_DICT } from './dict'
 
 import { getEveryLetters, getPinyinOfWords } from './utils'
 
-export interface covertToPinyinOptions {
+export interface convertToPinyinOptions {
 	separator?: string
+	capitalizeFirstLetter?: boolean
 }
 
 
-function covertToPinyin (
+function convert2Pinyin (
 	words: string, 
-	options: covertToPinyinOptions = {
-		separator: ''
+	options: convertToPinyinOptions = {
+		separator: '',
+		capitalizeFirstLetter: true
 	}
 ): string {
-	const { separator } = options
+	const { separator, capitalizeFirstLetter } = options
 
-	return getPinyinOfWords(getEveryLetters(words), { separator })
+	return getPinyinOfWords(
+		getEveryLetters(words), 
+		separator,
+		capitalizeFirstLetter
+	)
 }
 
 function getFirstLetters(word: string, options?: object): string {
@@ -26,7 +32,7 @@ function getFirstLetters(word: string, options?: object): string {
 
 
 const Chinese = {
-	covertToPinyin,
+	convert2Pinyin,
 	getFirstLetters
 }
 
