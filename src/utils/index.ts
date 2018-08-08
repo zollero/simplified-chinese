@@ -15,6 +15,11 @@ interface getEveryLettersOptions {
 
 type Words = Array<string>
 
+/**
+ * Return an array of single word
+ * @param words array of words
+ * @param options 
+ */
 export function getEveryLetters(
     words: string, 
     options: getEveryLettersOptions = {}
@@ -40,6 +45,22 @@ export function getPinyinOfWords(
     capitalizeFirstLetter: boolean = true
 ): string {
     return words.map(v => getPiyinOfWord(v, capitalizeFirstLetter)).join(separator)
+}
+
+export function extractFirstLetters(
+    words: Words,
+    separator: string = '',
+    uppercase: boolean = true
+): string {
+    return words.map(v => extractFirstLetter(getPiyinOfWord(v, false), uppercase)).join(separator)
+}
+
+function extractFirstLetter(pinyin: string, uppercase: boolean): string {
+    if (isString(pinyin) && pinyin.length > 0) {
+        const firstLetter = pinyin.charAt(0)
+        return uppercase ? firstLetter.toLocaleUpperCase() : firstLetter
+    }
+    return pinyin
 }
 
 /**

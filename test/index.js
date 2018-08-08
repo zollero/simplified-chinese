@@ -1,5 +1,5 @@
 
-const { convert2Pinyin } = require('..')
+const { convert2Pinyin, getFirstLetters } = require('..')
 const assert = require('assert')
 
 
@@ -34,6 +34,25 @@ describe('Convert chinese word to pinyin spell', () => {
                 capitalizeFirstLetter: false,
                 separator: '=='
             }), 'zhong==guo')
+        })
+    })
+
+    describe('Test of function of getFirstLetters', () => {
+
+        it('should return `WDZGX` default', () => {
+            assert.equal(getFirstLetters('我的中国心'), 'WDZGX')
+        })
+
+        it('should return  `W-D-Z-G-X` with separator: `-`', () => {
+            assert.equal(getFirstLetters('我的中国心', { separator: '-' }), 'W-D-Z-G-X')
+        })
+
+        it('should return `wdzgx` with uppercase: false', () => {
+            assert.equal(getFirstLetters('我的中国心', { uppercase: false }), 'wdzgx')
+        })
+
+        it('should return `w=d=z=g=x` with separator: `=` and uppercase: false', () => {
+            assert.equal(getFirstLetters('我的中国心', { separator: '=', uppercase: false }), 'w=d=z=g=x')
         })
     })
 })

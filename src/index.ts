@@ -1,11 +1,16 @@
 
 // import { POLY_PHONE, FULL_DICT, CHAR_DICT } from './dict'
 
-import { getEveryLetters, getPinyinOfWords } from './utils'
+import { getEveryLetters, getPinyinOfWords, extractFirstLetters } from './utils'
 
 export interface convertToPinyinOptions {
 	separator?: string
 	capitalizeFirstLetter?: boolean
+}
+
+export interface getFirstLettersOptions {
+	separator?: string
+	uppercase?: boolean
 }
 
 
@@ -25,9 +30,20 @@ function convert2Pinyin (
 	)
 }
 
-function getFirstLetters(word: string, options?: object): string {
+function getFirstLetters(
+	words: string, 
+	options: getFirstLettersOptions = {
+		separator: '',
+		uppercase: true
+	}
+): string {
+	const { separator, uppercase } = options
 
-	return ''
+	return extractFirstLetters(
+		getEveryLetters(words),
+		separator,
+		uppercase
+	)
 }
 
 
