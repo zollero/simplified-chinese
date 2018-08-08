@@ -1,6 +1,12 @@
 # simplified-chinese
 
+[![version][version-badge]][package]
+[![module formats: umd, cjs, and es][module-formats-badge]][unpkg-dist]
+[![MIT License][license-badge]][license]
+
 > A tool to do something with simplified chinese and pinyin.
+
+[![NPM](https://nodei.co/npm/simplified-chinese.png)](https://nodei.co/npm/simplified-chinese/)
 
 ## Installation
 
