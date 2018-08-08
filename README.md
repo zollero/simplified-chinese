@@ -32,7 +32,7 @@ console.log('The first letters of 好一朵美丽的茉莉花 is: ', firstLetter
 Or you can custorm the value of `convert2Pinyin` and `getFirstLetters`:
 
 ```
-const { convert2Pinyin, getFirstLetters } from 'simplified-chinese';
+import { convert2Pinyin, getFirstLetters } from 'simplified-chinese';
 
 const pinyin = convert2Pinyin('茉莉花', { separator: '-' });
 console.log('The pinyin of 茉莉花 is: ', pinyin); 
@@ -54,7 +54,7 @@ console.log('The first letters of 好一朵美丽的茉莉花 is: ', firstLetter
 
 ## Docs
 
-> const { convert2Pinyin, getFirstLetters } from 'simplified-chinese';
+> import { convert2Pinyin, getFirstLetters } from 'simplified-chinese';
 
 ### convert2Pinyin(words, options)
 

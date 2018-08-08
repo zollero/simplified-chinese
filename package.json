@@ -1,10 +1,15 @@
 {
   "name": "simplified-chinese",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tool to do something with simplified chinese and pinyin.",
   "main": "dist/simplified-chinese.min.js",
   "module": "dist/simplified-chinese.esm.js",
   "browser": "dist/simplified-chinese.umd.js",
+  "keywords": [
+    "chinese",
+    "pinyin",
+    "util"
+  ],
   "types": "types/index.d.ts",
   "scripts": {
     "dev": "rollup -c -w",
