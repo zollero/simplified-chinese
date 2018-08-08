@@ -1,6 +1,4 @@
 
-// import { POLY_PHONE, FULL_DICT, CHAR_DICT } from './dict'
-
 import { getEveryLetters, getPinyinOfWords, extractFirstLetters } from './utils'
 
 export interface convertToPinyinOptions {
@@ -13,7 +11,11 @@ export interface getFirstLettersOptions {
 	uppercase?: boolean
 }
 
-
+/**
+ * Return a string of the chinese words's pinyin
+ * @param words chinese words string
+ * @param options custorm optins
+ */
 function convert2Pinyin (
 	words: string, 
 	options: convertToPinyinOptions = {
@@ -30,6 +32,11 @@ function convert2Pinyin (
 	)
 }
 
+/**
+ * Return a string of the first letter in chinese words's pinyin
+ * @param words chinese words string
+ * @param options custorm options
+ */
 function getFirstLetters(
 	words: string, 
 	options: getFirstLettersOptions = {

@@ -3,10 +3,6 @@ import isString from 'is-string';
 
 import { FULL_DICT } from '../dict'
 
-interface getEveryLettersOptions {
-    // escapable: boolean // escape which is not a simplified chinese word
-    escapeText?: string // escape and replace with this text of which is not chinese
-}
 
 // interface getPinyinOfWordsOptions {
 //     separator?: string // text to join the pinyin of words
@@ -22,9 +18,8 @@ type Words = Array<string>
  */
 export function getEveryLetters(
     words: string, 
-    options: getEveryLettersOptions = {}
+    escapeText?: string
 ): Words {
-    const { escapeText } = options
 
     if (escapeText) {
        return words.split('').map(v => isSimplifiedChineseWord(v) ? v : escapeText)
@@ -47,6 +42,12 @@ export function getPinyinOfWords(
     return words.map(v => getPiyinOfWord(v, capitalizeFirstLetter)).join(separator)
 }
 
+/**
+ * Return the first letter of chinese words
+ * @param words array of chinese word
+ * @param separator the separator to join the first letters
+ * @param uppercase whether to capitalize the letters
+ */
 export function extractFirstLetters(
     words: Words,
     separator: string = '',
@@ -55,6 +56,11 @@ export function extractFirstLetters(
     return words.map(v => extractFirstLetter(getPiyinOfWord(v, false), uppercase)).join(separator)
 }
 
+/**
+ * Return the first letter of a chinese word's pinyin
+ * @param pinyin a chinese word's pinyin
+ * @param uppercase whether to uppercase the first letter
+ */
 function extractFirstLetter(pinyin: string, uppercase: boolean): string {
     if (isString(pinyin) && pinyin.length > 0) {
         const firstLetter = pinyin.charAt(0)
