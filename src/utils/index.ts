@@ -28,6 +28,12 @@ export function getEveryLetters(
     }
 }
 
+/**
+ * Return the pinyin the words of chinese
+ * @param words array of chinese word
+ * @param separator the separator to join the pinyin of words
+ * @param capitalizeFirstLetter whether to capitalize the first letter of every word's pinyin
+ */
 export function getPinyinOfWords(
     words: Words, 
     separator: string = '',
@@ -36,6 +42,11 @@ export function getPinyinOfWords(
     return words.map(v => getPiyinOfWord(v, capitalizeFirstLetter)).join(separator)
 }
 
+/**
+ * Return the pinyin of a chinese word
+ * @param word chinese word
+ * @param capitalizeFirstLetter whether to capitalize the first letter of every word's pinyin
+ */
 function getPiyinOfWord(word: string, capitalizeFirstLetter: boolean = true): string {
     const keys = Object.keys(FULL_DICT);
     let key
@@ -49,14 +60,22 @@ function getPiyinOfWord(word: string, capitalizeFirstLetter: boolean = true): st
     return key
 }
 
-function capitalizeTheFirstLetter(word: string): string {
-    if (isString(word) && word.length > 1) {
-        const firstLetter = word.charAt(0)
-        return word.replace(new RegExp(`^${firstLetter}`), firstLetter.toLocaleUpperCase())
+/**
+ * Capitialize the first letter of the pinyin and return the capitialized value
+ * @param pinyin a chinese word's pinyin
+ */
+function capitalizeTheFirstLetter(pinyin: string): string {
+    if (isString(pinyin) && pinyin.length > 1) {
+        const firstLetter = pinyin.charAt(0)
+        return pinyin.replace(new RegExp(`^${firstLetter}`), firstLetter.toLocaleUpperCase())
     }
-    return word
+    return pinyin
 }
 
+/**
+ * Check whether the words are all chinese words
+ * @param word chinese words string
+ */
 function isSimplifiedChineseWord(word: string): boolean {
     if (shouldBeString(word)) {
         return word.split('').every(v => isChineseUnicode(v.charCodeAt(0)))
@@ -64,10 +83,18 @@ function isSimplifiedChineseWord(word: string): boolean {
     return false
 }
 
+/**
+ * Check the word's char code is in the range of chinese code
+ * @param charCode word's char code
+ */
 function isChineseUnicode(charCode: number): boolean {
     return charCode >= 19968 && charCode <= 40869
 }
 
+/**
+ * Check whether the word's type is string
+ * @param word 
+ */
 function shouldBeString(word: string): boolean {
     if (isString(word)) {
         return true
