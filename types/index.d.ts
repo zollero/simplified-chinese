@@ -1,31 +1,9 @@
 
+import { convertToPinyinOptions, getFirstLettersOptions } from '../src'
+
 interface Chinese {
     
-    covertToPinyin(words: string, options?: Chinese.covertToPinyinOptions): string
+    covertToPinyin(words: string, options?: convertToPinyinOptions): string
 
-    getFirstLetters(words: string, options?: Chinese.getFirstLettersOptions): string
-}
-
-
-
-
-/************************************************
-*                                               *
-*               GLOBAL INTERFACES               *
-*                                               *
-************************************************/
-
-declare namespace Chinese {
-
-    export interface covertToPinyinOptions {
-
-    }
-
-    export interface getFirstLettersOptions {
-
-    }
-
-    export interface getEveryLettersOptions {
-
-    }
+    getFirstLetters(words: string, options?: getFirstLettersOptions): string
 }

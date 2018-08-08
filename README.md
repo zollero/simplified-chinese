@@ -9,13 +9,15 @@
 ## Getting Started
 
 ```
-const { convert2Pinyin, getFirstLetters } from 'simplified-chinese';
+import { convert2Pinyin, getFirstLetters } from 'simplified-chinese';
 
 const pinyin = convert2Pinyin('茉莉花');
-console.log('The pinyin of 茉莉花 is: ', pinyin); // The pinyin of 茉莉花 is:  MoLiHua
+console.log('The pinyin of 茉莉花 is: ', pinyin); 
+// The pinyin of 茉莉花 is:  MoLiHua
 
 const firstLetters = getFirstLetters('好一朵美丽的茉莉花');
-console.log('The first letters of 好一朵美丽的茉莉花 is: ', firstLetters); // The first letters of 好一朵美丽的茉莉花 is:  HYDMLDMLH
+console.log('The first letters of 好一朵美丽的茉莉花 is: ', firstLetters); 
+// The first letters of 好一朵美丽的茉莉花 is:  HYDMLDMLH
 ```
 
 Or you can custorm the value of `convert2Pinyin` and `getFirstLetters`:
@@ -24,10 +26,12 @@ Or you can custorm the value of `convert2Pinyin` and `getFirstLetters`:
 const { convert2Pinyin, getFirstLetters } from 'simplified-chinese';
 
 const pinyin = convert2Pinyin('茉莉花', { separator: '-' });
-console.log('The pinyin of 茉莉花 is: ', pinyin); // The pinyin of 茉莉花 is:  Mo-Li-Hua
+console.log('The pinyin of 茉莉花 is: ', pinyin); 
+// The pinyin of 茉莉花 is:  Mo-Li-Hua
 
 const firstLetters = getFirstLetters('好一朵美丽的茉莉花', { separator: '>'});
-console.log('The first letters of 好一朵美丽的茉莉花 is: ', firstLetters); // The first letters of 好一朵美丽的茉莉花 is:  H>Y>D>M>L>D>M>L>H
+console.log('The first letters of 好一朵美丽的茉莉花 is: ', firstLetters); 
+// The first letters of 好一朵美丽的茉莉花 is:  H>Y>D>M>L>D>M>L>H
 ```
 
 ## Test

@@ -4,6 +4,7 @@ import { getEveryLetters, getPinyinOfWords, extractFirstLetters } from './utils'
 export interface convertToPinyinOptions {
 	separator?: string
 	capitalizeFirstLetter?: boolean
+	escapeText?: string
 }
 
 export interface getFirstLettersOptions {
@@ -23,10 +24,10 @@ function convert2Pinyin (
 		capitalizeFirstLetter: true
 	}
 ): string {
-	const { separator, capitalizeFirstLetter } = options
+	const { separator, capitalizeFirstLetter, escapeText } = options
 
 	return getPinyinOfWords(
-		getEveryLetters(words), 
+		getEveryLetters(words, escapeText), 
 		separator,
 		capitalizeFirstLetter
 	)
