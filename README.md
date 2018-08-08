@@ -1,8 +1,16 @@
 # simplified-chinese
 
-[![version][version-badge]][package]
-[![module formats: umd, cjs, and es][module-formats-badge]][unpkg-dist]
-[![MIT License][license-badge]][license]
+![npm](https://img.shields.io/npm/v/simplified-chinese.svg)
+
+![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/simplified-chinese.svg)
+
+![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/simplified-chinese.svg)
+
+![npm](https://img.shields.io/npm/dw/simplified-chinese.svg?style=popout)
+
+![npm](https://img.shields.io/npm/dm/simplified-chinese.svg?style=popout)
+
+![npm](https://img.shields.io/npm/l/simplified-chinese.svg)
 
 > A tool to do something with simplified chinese and pinyin.
 
