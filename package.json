@@ -26,10 +26,12 @@
     "rollup": "^0.63.4",
     "rollup-plugin-commonjs": "^9.1.4",
     "rollup-plugin-json": "^3.0.0",
+    "rollup-plugin-license": "^0.7.0",
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-typescript": "^0.8.1",
     "rollup-plugin-uglify": "^4.0.0",
-    "typescript": "^2.9.2"
+    "typescript": "^2.9.2",
+    "uglify-es": "^3.3.9"
   },
   "dependencies": {
     "is-string": "^1.0.4"
